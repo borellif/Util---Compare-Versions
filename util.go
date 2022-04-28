@@ -7,8 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello, world.")
-
 	winner, err := compareVersions("0.1", "1.1")
 
 	if err == nil {
@@ -34,9 +32,9 @@ func compareVersions(version1, version2 string) (int, error) {
 
 	for index, value := range splitVar1 {
 		if value > splitVar2[index] {
-			return 1, nil
+				return 1, nil
 		} else if value < splitVar2[index] {
-			return -1, nil
+				return -1, nil
 		}
 	}
 
